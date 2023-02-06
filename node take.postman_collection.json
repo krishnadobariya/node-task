@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "44bf8206-5b2a-427c-973d-f9f1e65b277b",
+		"name": "node take",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16420143"
+	},
+	"item": [
+		{
+			"name": "user sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\" : \"test\",\n    \"last_name\" : \"test\",\n    \"mobile_number\" : \"9876543210\",\n    \"email\" : \"test@gmail.com\",\n    \"password\" : \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"test@gmail.com\",\n    \"password\" : \"test\"\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/users/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UwZjE5MzA2ODhlNjFlOGU1NTY4NDkiLCJpYXQiOjE2NzU2ODYzMDZ9.XH17T49xnwNa-9ebFBPQhVHhzWOxlo1eAoz3HtxOylY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user log out",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UwZDBhOTBkNWQ5MjNjNTdlM2IyMDYiLCJpYXQiOjE2NzU2ODYyNjd9.PbFD9l7RJTRmZ667tshh5rLYnGab6ofRKH2X40ikQ_0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/users/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "random jokes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/users/random-joke",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"random-joke"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
